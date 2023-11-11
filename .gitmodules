@@ -1,0 +1,12 @@
+[submodule "emailer-service"]
+	path = emailer-service
+	url = ssh://git@github.com/LorenzoLeonardo/emailer-service.git
+[submodule "modern-auth-service"]
+	path = modern-auth-service
+	url = ssh://git@github.com/LorenzoLeonardo/modern-auth-service.git
+[submodule "ipc-server"]
+	path = ipc-server
+	url = ssh://git@github.com/LorenzoLeonardo/ipc-server.git
+[submodule "smtp-xoauth2"]
+	path = smtp-xoauth2
+	url = ssh://git@github.com/LorenzoLeonardo/smtp-xoauth2.git
