@@ -3,7 +3,9 @@ git submodule update --init --recursive
 rem "start building the rust components........"
 cd ipc-server
 cargo build --release
-cd ..
+cd target\release\
+ren ipc_server.exe ipc-server.exe
+cd ..\..\..
 cd modern-auth-service
 cargo build --release
 cd ..
@@ -21,7 +23,7 @@ cd ..
 
 mkdir release
 
-copy /Y ipc-server\target\release\ipc_server.exe release
+copy /Y ipc-server\target\release\ipc-server.exe release
 copy /Y modern-auth-service\target\release\modern-auth-service.exe release
 copy /Y emailer-service\target\release\emailer-service.exe release
 copy /Y smtp-xoauth2\x64\Release\smtp-xoauth2.exe release
