@@ -2,14 +2,17 @@ git submodule update --init --recursive
 
 rem "start building the rust components........"
 cd ipc-server
+rmdir /s /q target
 cargo build --release
 cd target\release\
 ren ipc_server.exe ipc-server.exe
 cd ..\..\..
 cd modern-auth-service
+rmdir /s /q target
 cargo build --release
 cd ..
 cd emailer-service
+rmdir /s /q target
 cargo build --release
 cd ..
 
