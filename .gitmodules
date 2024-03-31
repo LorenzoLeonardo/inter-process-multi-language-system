@@ -14,3 +14,6 @@
 	path = smtp-xoauth2
 	url = ssh://git@github.com/LorenzoLeonardo/smtp-xoauth2.git
 	branch = "master"
+[submodule "remote-call"]
+	path = remote-call
+	url = https://github.com/LorenzoLeonardo/remote-call.git
