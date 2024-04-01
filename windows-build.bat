@@ -1,8 +1,17 @@
+@echo off
+
 git submodule update --init --recursive
 
 rem "start building the MFC C++ components........"
+
+set "folderPath=C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
+if exist "%folderPath%" (
+    set MSBUILD_PATH="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Msbuild\Current\Bin\MSBuild.exe"
+) else (
+    set MSBUILD_PATH="C:\Program Files\Microsoft Visual Studio\2022\Community\Msbuild\Current\Bin\MSBuild.exe"
+)
+
 cd smtp-xoauth2
-set MSBUILD_PATH="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Msbuild\Current\Bin\MSBuild.exe"
 set SOLUTION_FILE=smtp-xoauth2.sln
 set BUILD_CONFIGURATION=Release
 %MSBUILD_PATH% %SOLUTION_FILE% /t:Build /p:Configuration=%BUILD_CONFIGURATION%
