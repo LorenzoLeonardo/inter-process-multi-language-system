@@ -39,4 +39,5 @@ copy /Y remote-call\target\release\remote-call.exe release
 copy /Y modern-auth-service\target\release\modern-auth-service.exe release
 copy /Y emailer-service\target\release\emailer-service.exe release
 copy /Y smtp-xoauth2\x64\Release\smtp-xoauth2.exe release
+copy /Y smtp-xoauth2\*.json release
 copy /Y start.bat release
